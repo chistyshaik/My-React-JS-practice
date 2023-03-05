@@ -13,14 +13,15 @@ import React, {useState} from "react";    //usestate is a hook in react
 export default function Selfdata(props) {
 
   const handleUpClick = ()=>{
-    console.log("button was clicked" + text )
+    //console.log("button was clicked" + text )
     let newText = text.toUpperCase();
     setText(newText);
   }
 
+  // to update a state variable from text to settext we must use an onchange event
+
   const handleOnChange = (event)=>{
     // we must pass event object and event.target.value just while we take input-values from user like we r taking users typed data in text box in this project
-    console.log("onchange")
     setText(event.target.value)
   }
 
@@ -33,6 +34,7 @@ const [text, setText] = useState("Enter text here........");
         <textarea
           className="form-control"
           value = {text}
+  // to update a state variable from text to settext we must use an onchange event
           onChange={handleOnChange} 
           id="exampleFormControlTextarea1"
           rows="8"
