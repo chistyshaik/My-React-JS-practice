@@ -7,14 +7,20 @@
 3. Server state 
 4. URL state 
 
+
+
 ### Props vs State
 
 - Props and State both hold information that influences the output of render, they are different in one important way i.e :
 
 - props get passed to the component (similar to function's parameters) whereas
 
+- state is managed within the component (similar to variables declared within a function).
+
+
 
 ### Some info About State in react
+
 
 ```javascript
 import React, {useState} from "react";    //usestate is a hook in react
@@ -28,6 +34,9 @@ const [count , setCount] = useState(0);  // syntax of state variable in react
 - we can update the count function through setCount function, which means setCount is the updation function of count
 - we can rename count and setcount with our choice names like we did in the below syntax
 - note :- state is managed within the component ([count, setCount] are similar to variables declared within a function )
+
+
+
 
 
 
