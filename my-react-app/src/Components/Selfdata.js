@@ -42,7 +42,7 @@ export default function Selfdata(props) {
 const [text, setText] = useState("Enter text here........");
   return (
     <>
-    <div className="container">
+    <div className="container" style={ { color : props.mode === 'dark'? 'white': '#042743'}}>
       <h2>{props.heading}</h2>
       <div className="mb-3">
         <textarea
@@ -50,6 +50,7 @@ const [text, setText] = useState("Enter text here........");
           value = {text}
   // to update a state variable from text to settext we must use an onchange event
           onChange={handleOnChange} 
+          style = {{ backgroundColor : props.mode === ''? '#042743': 'white'}}
           id="exampleFormControlTextarea1"
           rows="8"
         ></textarea>
@@ -65,7 +66,7 @@ const [text, setText] = useState("Enter text here........");
       </button>
     </div>
 
-    <div className="container my-4" >
+    <div className="container my-4" style={{ color : props.mode === 'dark'? 'white': '#042743'}}>
       <h3>Your Text Summary</h3>
       <p>There are {text.split(" ").length-1} words  and {text.length} letters in the above text.  </p>
       <p>It will take {0.008 * text.split(" ").length} minutes to read the above text approximately...</p>
