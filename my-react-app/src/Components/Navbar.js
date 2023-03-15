@@ -70,9 +70,9 @@ export default function Navbar(props) {
                   </ul>
                 </li>
               </ul>
-              {/* <form className="d-flex" role="search">
+              {/* <htmlform className="d-flex" role="search">
               <input
-                className="form-control me-2"
+                className="htmlform-control me-2"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
@@ -80,18 +80,17 @@ export default function Navbar(props) {
               <button className="btn btn-outline-success" type="submit">
                 Search
               </button>
-            </form> */}
-              <div className= {`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
+            </htmlform> */}
+              <div className = {`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
                 <input
-                  className="form-check-input"
+                  className ="form-check-input"
                   onClick={props.toggleMode}
                   type="checkbox"
                   role="switch"
                   id="flexSwitchCheckDefault"
                 />
-                <label className="form-check-label" for="flexSwitchCheckDefault">
-                  {" "}
-                  Enable Dark Mode{" "}
+                <label className ="form-check-label" for="flexSwitchCheckDefault">
+                  Enable Dark Mode
                 </label>
               </div>
             </div>
@@ -103,9 +102,9 @@ export default function Navbar(props) {
 }
 
 Navbar.propTypes = {
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
 };
 
 Navbar.defaultProps = {
-  title: "Set title here"
+  title: "Set title here",
 };

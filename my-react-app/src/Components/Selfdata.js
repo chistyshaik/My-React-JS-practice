@@ -16,18 +16,21 @@ export default function Selfdata(props) {
     //console.log("button was clicked" + text )
     let newText = text.toUpperCase();
     setText(newText);
+    props.showAlert("Text converted into UpperCase",  "success")
   }
 
   const handledownClick = ()=>{
     //console.log("button was clicked" + text )
     let newText2 = text.toLowerCase();
     setText(newText2);
+    props.showAlert("Text converted into lowerCase",  "success")
   }
 
   const handlclearClick = ()=>{
     //console.log("button was clicked" + text )
     let newText3 = " " ;
     setText(newText3);
+    props.showAlert("You have cleared the text", "success")
   }
 
 
@@ -68,7 +71,7 @@ const [text, setText] = useState("Enter text here........");
 
     <div className="container my-4" style={{ color : props.mode === 'dark'? 'white': '#042743'}}>
       <h3>Your Text Summary</h3>
-      <p>There are {text.split(" ").length-1} words  and {text.length} letters in the above text.  </p>
+      <p>There are {text.split(" ").length} words  and {text.length} letters in the above text.  </p>
       <p>It will take {0.008 * text.split(" ").length} minutes to read the above text approximately...</p>
     </div>
     </>
