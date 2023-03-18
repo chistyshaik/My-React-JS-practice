@@ -60,6 +60,7 @@ const [text, setText] = useState("Enter text here........");
       </div>
       <button disabled={text.length===0} className="btn btn-primary mx-2" onClick={handleUpClick} >
         Capitalize text
+        
       </button>
       <button disabled={text.length===0} className="btn btn-primary mx-2" onClick={handledownClick} >
         Lowercase Text
