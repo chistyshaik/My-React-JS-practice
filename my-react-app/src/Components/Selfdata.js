@@ -58,21 +58,21 @@ const [text, setText] = useState("Enter text here........");
           rows="8"
         ></textarea>
       </div>
-      <button className="btn btn-primary mx-2" onClick={handleUpClick} >
+      <button disabled={text.length===0} className="btn btn-primary mx-2" onClick={handleUpClick} >
         Capitalize text
       </button>
-      <button className="btn btn-primary mx-2" onClick={handledownClick} >
+      <button disabled={text.length===0} className="btn btn-primary mx-2" onClick={handledownClick} >
         Lowercase Text
       </button>
-      <button className="btn btn-primary mx-2" onClick={handlclearClick} >
+      <button disabled={text.length===0} className="btn btn-primary mx-2" onClick={handlclearClick} >
         Clear Text
       </button>
     </div>
 
     <div className="container my-4" style={{ color : props.mode === 'dark'? 'white': '#042743'}}>
       <h3>Your Text Summary</h3>
-      <p>There are {text.split(" ").length} words  and {text.length} letters in the above text.  </p>
-      <p>It will take {0.008 * text.split(" ").length} minutes to read the above text approximately...</p>
+      <p>There are {text.split(" ").filter((element)=>{return element.length!== 0}).length} words  and {text.length} letters in the above text.  </p>
+      <p>It will take {0.008 * text.split(" ").filter((element)=>{return element.length!== 0}).length} minutes to read the above text approximately...</p>
     </div>
     </>
   );
