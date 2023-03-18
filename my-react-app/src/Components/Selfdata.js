@@ -60,7 +60,7 @@ const [text, setText] = useState("Enter text here........");
       </div>
       <button disabled={text.length===0} className="btn btn-primary mx-2" onClick={handleUpClick} >
         Capitalize text
-        
+
       </button>
       <button disabled={text.length===0} className="btn btn-primary mx-2" onClick={handledownClick} >
         Lowercase Text
@@ -72,7 +72,7 @@ const [text, setText] = useState("Enter text here........");
 
     <div className="container my-4" style={{ color : props.mode === 'dark'? 'white': '#042743'}}>
       <h3>Your Text Summary</h3>
-      <p>There are {text.split(" ").filter((element)=>{return element.length!== 0}).length} words  and {text.length} letters in the above text.  </p>
+      <p>There are {text.split(/\s+/).filter((element)=>{return element.length!== 0}).length} words  and {text.length} letters in the above text.  </p>
       <p>It will take {0.008 * text.split(" ").filter((element)=>{return element.length!== 0}).length} minutes to read the above text approximately...</p>
     </div>
     </>
