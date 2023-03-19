@@ -13,6 +13,28 @@ Note :- If we r using JSX in react we need to remeber that we can only return **
 
 - It means adjacent JSX elements must be wrapped in an enclosing tag
 
+### What is a function based component ?
+- Functional component is just a simple javascript function; it accepts the data in the form of props and returns the react element.
+
+- After the introduction of React Hooks, writing functional components has become the ​standard way of writing React components in modern applications.
+
+
+### Syntax of a Function-Base-Component ;-
+**NOTE :-THE COMPONENT NAME'S FIRST LETTER SHOULD BE IN UPPERCASE**
+
+```Javascript
+import React from 'react'
+
+export default function ComponentName() {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+```
+
 ```javascript
 // in the below code function App() is returning only one div i.e className = App
 
@@ -80,4 +102,6 @@ function App() {
 export default App;
 
 ```
+
+### Refer 6th md file to know about class base compnents and differences between function base and class base compoent
 
