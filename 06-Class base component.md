@@ -54,3 +54,4 @@ export default class ComponentName extends Component {
 **Differences between FUNCTIONAL and CLASS COMPONENTS**
 
 ![Alt text](../My-React-JS-practice/my-react-app/src/images/function%20vs%20class%20base%20components.png)
+https://www.geeksforgeeks.org/differences-between-functional-components-and-class-components-in-react/
